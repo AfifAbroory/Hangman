@@ -3,22 +3,22 @@ from time import sleep
 from os import system, name
 
 def RandomWord():
-	ListWords = [
+        ListWords = [
 	'Shark', 'Sloth', 'Hamster', 'Bee', 'Monkey', 'Wolf', 'Crab', 'Lion', 'Ant', 'Camel', 'Chicken', 
 	'Cheetah', 'Cow', 'Deer', 'Dog', 'Dolphin', 'Duck', 'Goat', 'Eagle', 'Seal', 'Bear', 'Spider', 
 	'Hornet', 'Jaguar', 'Jellyfish', 'Parrot', 'Llama', 'Giraffe', 'Mice', 'Puma', 'Zebra', 'Rabbit', 
 	'Snake', 'Fish', 'Bird', 'Tapir', 'Turtle', 'Bat', 'Wolves'
 	]
+    
+        Word = choice(ListWords).upper()
 
-	Word = choice(ListWords).upper()
-
-	return Word
+        return Word
 
 def HideWord(RandomWords):
-	HideWords = '_' * len(RandomWords)
-	HideWords = ' '.join(HideWords)
+        HideWords = '_' * len(RandomWords)
+        HideWords = ' '.join(HideWords)
 
-	return HideWords
+        return HideWords
 
 def ASCII(Indx = 6):
 	Hangman = ['''
@@ -214,11 +214,12 @@ def ClearScreen():
         system('clear')
 
 def AskToPlay(Playing):
-    if Playing == 0:
-        UserInput = input('\n(Type [1] for User Guide)\n >> Are You Ready To Play? [Y/N]: ')
+        if Playing == 0:
+                text = 'Are You Ready To Play?'
 
-    else:
+        else:
+                text = 'Play Again?'
 
-        UserInput = input('\n(Type [1] for User Guide)\n >> Play Again? [Y/N]: ')
+        UserInput = input('\n(Type [1] for User Guide)\n >> {} [Y/N]: '.format(text))
 
-    return str(UserInput.upper())
+        return str(UserInput.upper())

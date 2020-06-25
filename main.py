@@ -1,5 +1,4 @@
-from hangman import *
-
+from Hangman import *
 
 # Chance TITLE!!!
 Title = '''
